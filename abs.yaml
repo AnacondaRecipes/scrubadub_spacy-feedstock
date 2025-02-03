@@ -1,0 +1,6 @@
+upload_channels:
+  - sfe1ed40
+
+channels:
+  - https://staging.continuum.io/prefect/fs/textblob-feedstock/pr4/8ae0a6d
+  - https://staging.continuum.io/prefect/fs/scrubadub-feedstock/pr1/17ce7cb
