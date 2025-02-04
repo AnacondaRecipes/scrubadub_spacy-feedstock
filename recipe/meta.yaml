@@ -38,7 +38,7 @@ requirements:
     - setuptools
   run:
     - python
-    - scrubadub >=2.0.0rc0
+    - scrubadub >=2.0.0
     # https://github.com/LeapBeyond/scrubadub_spacy/blob/v2.0.0/requirements/python#L4
     # spacy[transformers]>=3.0.0
     - spacy >=3.0.0  # [py>=36]
