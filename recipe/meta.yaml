@@ -8,15 +8,16 @@ package:
 source:
   url: https://github.com/LeapBeyond/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: cd90477bc3f243d366e5eb8a3a443e58a97e3c1785dcfc4cf02742bc1a4a967e
-  patches:
-    - patches/0001-update-run.py.patch
+  # With the tests only
+  #patches:
+    #- patches/0001-update-run.py.patch
     # Created an issue on these 2 failed tests.
     # https://github.com/LeapBeyond/scrubadub_spacy/issues/6
-    - patches/0002-disabled-test_doc.patch
-    - patches/0003-disabled-test_long_text.patch
+    #- patches/0002-disabled-test_doc.patch
+    #- patches/0003-disabled-test_long_text.patch
     # tests failed on win by reason: python --version was unexpected at this time.
     # run nosetests ./tests/ without check on py35
-    - patches/0004-change-py3-on-py-for-win-only.patch  # [win]
+    #- patches/0004-change-py3-on-py-for-win-only.patch  # [win]
 
 build:
   number: 0
