@@ -60,11 +60,13 @@ test:
     - pip check
     # Test execution example
     # https://github.com/LeapBeyond/scrubadub_spacy/blob/v2.0.0/tox.ini#L17C5-L20C134
-    - bash -c "python -m spacy info | grep Pipelines | grep -qv en_core_web_trf && python -m spacy download en_core_web_trf || exit 0"
-    - bash -c "python -m spacy info | grep Pipelines | grep -qv en_core_web_sm && python -m spacy download en_core_web_sm || exit 0"
-    - bash -c "python -m spacy info | grep Pipelines | grep -qv fr_core_news_lg && python -m spacy download fr_core_news_lg || exit 0"
-    - bash -c "python -m spacy info | grep Pipelines | grep -qv de_core_news_sm && python -m spacy download de_core_news_sm || exit 0"
-    - python tests/run.py
+    # Due to the fact that to run the tests correctly, it is necessary to download about 700 megabytes of data via the "spacy download" command,
+    # it was decided to run the tests only in the pull request and comment them when merging with the default branch.
+    #- bash -c "python -m spacy info | grep Pipelines | grep -qv en_core_web_trf && python -m spacy download en_core_web_trf || exit 0"
+    #- bash -c "python -m spacy info | grep Pipelines | grep -qv en_core_web_sm && python -m spacy download en_core_web_sm || exit 0"
+    #- bash -c "python -m spacy info | grep Pipelines | grep -qv fr_core_news_lg && python -m spacy download fr_core_news_lg || exit 0"
+    #- bash -c "python -m spacy info | grep Pipelines | grep -qv de_core_news_sm && python -m spacy download de_core_news_sm || exit 0"
+    #- python tests/run.py
   requires:
     - pip
     - wasabi
